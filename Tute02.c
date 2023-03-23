@@ -20,22 +20,22 @@ Amount = 30 x 50 + (50-30) x 40 = 2300*/
 
 int main() 
 {
-  float distance;
-  float rent=0;
+  int distance;
+  float fare;
 
   printf("Input the distance the vehicle has travelled:");
-  scanf("%f",&distance);
+  scanf("%d",&distance);
 
-  if (distance>30)
+  if (distance<30)
   {
-    rent=distance*50; 
+    fare=distance*50; 
   }
-  else
+  else if (distance>30)
   {
-    rent = distance*50+(distance-30)*40;
+    fare = 30*50 + (distance-30)*40;
   }
   
-  printf("Payment for rent %.2f",rent);
+  printf("Payment for rent : %.2f",fare);
 
   return 0;
 }
