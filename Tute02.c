@@ -26,16 +26,16 @@ int main()
   printf("Input the distance the vehicle has travelled:");
   scanf("%d",&distance);
 
-  if (distance<30)
+  if (distance<30) //The first 30 km is at a rate of 50/= per km
   {
     fare=distance*50; 
   }
-  else if (distance>30)
+  else if (distance>30) // The remaining distance is calculated at the rate of 40/= per km
   {
     fare = 30*50 + (distance-30)*40;
   }
   
-  printf("Payment for rent : %.2f",fare);
+  printf("Payment for rent : %.2f",fare); // Display fare for rented vehicle
 
   return 0;
 }
